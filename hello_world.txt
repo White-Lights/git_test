@@ -1,1 +1,3 @@
 Hello! This is my first work on any sort of coding project and I'm very excited!
+
+Making a change to judge the difference with git config on VS Code.
