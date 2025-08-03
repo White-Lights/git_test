@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Function library example</title>
+  <style>
+    input {
+      font-size: 2em;
+      margin: 10px 1px 0;
+    }
+  </style>
+  </head>
+<body>
+
+<button onclick="randomNumbers()">Click me</button>
+
+  <script>
+    function randomNumbers(limit) {
+      limit = 10;
+      const numArray = [];
+
+      for (let x = 1; x <= limit; x++) {
+        numArray.push(Math.floor(Math.random() * 101));
+      }
+      numArray.sort();
+      console.log(numArray);
+      console.log(numArray[7]);
+    }
+
+    let add7 = num => (num + 7);
+
+    let multiply = (a, b) => (a * b);
+
+    function capitalize() {
+      let text = prompt("Give some text!");
+      // Turns all text lowercase.
+      text = text.toLowerCase(text);
+      // console.log(text)
+
+      // Finds the first letter, makes it uppercase.
+      let firstLetter = text.substring(0, 1);
+      firstLetterCap = firstLetter.toUpperCase(firstLetter);
+
+      // Takes the lowercase text and replaces the first letter with an uppercase one.
+      let newText = text.replace(firstLetter, firstLetterCap)
+      return newText
+    }
+
+    function lastLetter(text) {
+      let textLength = text.length;
+      // console.log("The text length is " + textLength + " characters long!");
+      let finalLetter = text.charAt(textLength - 1);
+      return finalLetter;
+    }
+  </script>
+</body>
+</html>
